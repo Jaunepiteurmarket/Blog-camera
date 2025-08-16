@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caméra en direct</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+        .camera {
+            margin: 2rem auto;
+            max-width: 900px;
+            background: #fff;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+        .fallback {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        .fallback a {
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .fallback a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        📡 Ma caméra en direct
+    </header>
+    <div class="camera">
+        <h2>Flux vidéo en temps réel</h2>
+
+        <!-- IFRAME Mangocam -->
+        <iframe src="https://www124.mangocam.com/s.php?m=1&c=91284&x=640&y=480" allowfullscreen></iframe>
+
+        <!-- Lien alternatif -->
+        <div class="fallback">
+            🔗 Si la vidéo ne s'affiche pas, <br>
+            <a href="https://www124.mangocam.com/s.php?m=1&c=91284&x=640&y=480" target="_blank">clique ici pour voir la caméra</a>
+        </div>
+    </div>
+    <footer>
+        Propulsé par Mangocam • Partagé via mon blog perso
+    </footer>
+</body>
+</html>
